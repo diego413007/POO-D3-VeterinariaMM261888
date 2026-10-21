@@ -1,0 +1,277 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="VeterinariaDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Especie">
+          <Key>
+            <PropertyRef Name="codigo_especie" />
+          </Key>
+          <Property Name="codigo_especie" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nombre_especie" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Mascota">
+          <Key>
+            <PropertyRef Name="codigo_mascota" />
+          </Key>
+          <Property Name="codigo_mascota" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nombre" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="sexo" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="peso_kg" Type="decimal" Precision="6" Scale="2" />
+          <Property Name="fecha_ingreso" Type="date" Nullable="false" />
+          <Property Name="codigo_raza" Type="int" Nullable="false" />
+          <Property Name="dui_propietario" Type="char" MaxLength="10" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Propietario">
+          <Key>
+            <PropertyRef Name="dui" />
+          </Key>
+          <Property Name="dui" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="nombres" Type="nvarchar" MaxLength="80" Nullable="false" />
+          <Property Name="primer_apellido" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="segundo_apellido" Type="nvarchar" MaxLength="50" />
+          <Property Name="telefono" Type="nvarchar" MaxLength="15" />
+          <Property Name="direccion" Type="nvarchar" MaxLength="150" />
+        </EntityType>
+        <EntityType Name="Raza">
+          <Key>
+            <PropertyRef Name="codigo_raza" />
+          </Key>
+          <Property Name="codigo_raza" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nombre_raza" Type="nvarchar" MaxLength="80" Nullable="false" />
+          <Property Name="tamano" Type="nvarchar" MaxLength="20" />
+          <Property Name="codigo_especie" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_Mascota_Propietario">
+          <End Role="Propietario" Type="Self.Propietario" Multiplicity="1" />
+          <End Role="Mascota" Type="Self.Mascota" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Propietario">
+              <PropertyRef Name="dui" />
+            </Principal>
+            <Dependent Role="Mascota">
+              <PropertyRef Name="dui_propietario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Mascota_Raza">
+          <End Role="Raza" Type="Self.Raza" Multiplicity="1" />
+          <End Role="Mascota" Type="Self.Mascota" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Raza">
+              <PropertyRef Name="codigo_raza" />
+            </Principal>
+            <Dependent Role="Mascota">
+              <PropertyRef Name="codigo_raza" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Raza_Especie">
+          <End Role="Especie" Type="Self.Especie" Multiplicity="1" />
+          <End Role="Raza" Type="Self.Raza" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Especie">
+              <PropertyRef Name="codigo_especie" />
+            </Principal>
+            <Dependent Role="Raza">
+              <PropertyRef Name="codigo_especie" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="VeterinariaDBModelStoreContainer">
+          <EntitySet Name="Especie" EntityType="Self.Especie" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Mascota" EntityType="Self.Mascota" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Propietario" EntityType="Self.Propietario" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Raza" EntityType="Self.Raza" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Mascota_Propietario" Association="Self.FK_Mascota_Propietario">
+            <End Role="Propietario" EntitySet="Propietario" />
+            <End Role="Mascota" EntitySet="Mascota" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Mascota_Raza" Association="Self.FK_Mascota_Raza">
+            <End Role="Raza" EntitySet="Raza" />
+            <End Role="Mascota" EntitySet="Mascota" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Raza_Especie" Association="Self.FK_Raza_Especie">
+            <End Role="Especie" EntitySet="Especie" />
+            <End Role="Raza" EntitySet="Raza" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="VeterinariaDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Especie">
+          <Key>
+            <PropertyRef Name="codigo_especie" />
+          </Key>
+          <Property Name="codigo_especie" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombre_especie" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Raza" Relationship="Self.FK_Raza_Especie" FromRole="Especie" ToRole="Raza" />
+        </EntityType>
+        <EntityType Name="Mascota">
+          <Key>
+            <PropertyRef Name="codigo_mascota" />
+          </Key>
+          <Property Name="codigo_mascota" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="sexo" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="peso_kg" Type="Decimal" Precision="6" Scale="2" />
+          <Property Name="fecha_ingreso" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="codigo_raza" Type="Int32" Nullable="false" />
+          <Property Name="dui_propietario" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Propietario" Relationship="Self.FK_Mascota_Propietario" FromRole="Mascota" ToRole="Propietario" />
+          <NavigationProperty Name="Raza" Relationship="Self.FK_Mascota_Raza" FromRole="Mascota" ToRole="Raza" />
+        </EntityType>
+        <EntityType Name="Propietario">
+          <Key>
+            <PropertyRef Name="dui" />
+          </Key>
+          <Property Name="dui" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="nombres" Type="String" MaxLength="80" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="primer_apellido" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="segundo_apellido" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="telefono" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="direccion" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Mascota" Relationship="Self.FK_Mascota_Propietario" FromRole="Propietario" ToRole="Mascota" />
+        </EntityType>
+        <EntityType Name="Raza">
+          <Key>
+            <PropertyRef Name="codigo_raza" />
+          </Key>
+          <Property Name="codigo_raza" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombre_raza" Type="String" MaxLength="80" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="tamano" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="codigo_especie" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Especie" Relationship="Self.FK_Raza_Especie" FromRole="Raza" ToRole="Especie" />
+          <NavigationProperty Name="Mascota" Relationship="Self.FK_Mascota_Raza" FromRole="Raza" ToRole="Mascota" />
+        </EntityType>
+        <Association Name="FK_Raza_Especie">
+          <End Role="Especie" Type="Self.Especie" Multiplicity="1" />
+          <End Role="Raza" Type="Self.Raza" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Especie">
+              <PropertyRef Name="codigo_especie" />
+            </Principal>
+            <Dependent Role="Raza">
+              <PropertyRef Name="codigo_especie" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Mascota_Propietario">
+          <End Role="Propietario" Type="Self.Propietario" Multiplicity="1" />
+          <End Role="Mascota" Type="Self.Mascota" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Propietario">
+              <PropertyRef Name="dui" />
+            </Principal>
+            <Dependent Role="Mascota">
+              <PropertyRef Name="dui_propietario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Mascota_Raza">
+          <End Role="Raza" Type="Self.Raza" Multiplicity="1" />
+          <End Role="Mascota" Type="Self.Mascota" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Raza">
+              <PropertyRef Name="codigo_raza" />
+            </Principal>
+            <Dependent Role="Mascota">
+              <PropertyRef Name="codigo_raza" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="VeterinariaDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Especie" EntityType="Self.Especie" />
+          <EntitySet Name="Mascota" EntityType="Self.Mascota" />
+          <EntitySet Name="Propietario" EntityType="Self.Propietario" />
+          <EntitySet Name="Raza" EntityType="Self.Raza" />
+          <AssociationSet Name="FK_Raza_Especie" Association="Self.FK_Raza_Especie">
+            <End Role="Especie" EntitySet="Especie" />
+            <End Role="Raza" EntitySet="Raza" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Mascota_Propietario" Association="Self.FK_Mascota_Propietario">
+            <End Role="Propietario" EntitySet="Propietario" />
+            <End Role="Mascota" EntitySet="Mascota" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Mascota_Raza" Association="Self.FK_Mascota_Raza">
+            <End Role="Raza" EntitySet="Raza" />
+            <End Role="Mascota" EntitySet="Mascota" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="VeterinariaDBModelStoreContainer" CdmEntityContainer="VeterinariaDBEntities">
+          <EntitySetMapping Name="Especie">
+            <EntityTypeMapping TypeName="VeterinariaDBModel.Especie">
+              <MappingFragment StoreEntitySet="Especie">
+                <ScalarProperty Name="codigo_especie" ColumnName="codigo_especie" />
+                <ScalarProperty Name="nombre_especie" ColumnName="nombre_especie" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Mascota">
+            <EntityTypeMapping TypeName="VeterinariaDBModel.Mascota">
+              <MappingFragment StoreEntitySet="Mascota">
+                <ScalarProperty Name="codigo_mascota" ColumnName="codigo_mascota" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="sexo" ColumnName="sexo" />
+                <ScalarProperty Name="peso_kg" ColumnName="peso_kg" />
+                <ScalarProperty Name="fecha_ingreso" ColumnName="fecha_ingreso" />
+                <ScalarProperty Name="codigo_raza" ColumnName="codigo_raza" />
+                <ScalarProperty Name="dui_propietario" ColumnName="dui_propietario" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Propietario">
+            <EntityTypeMapping TypeName="VeterinariaDBModel.Propietario">
+              <MappingFragment StoreEntitySet="Propietario">
+                <ScalarProperty Name="dui" ColumnName="dui" />
+                <ScalarProperty Name="nombres" ColumnName="nombres" />
+                <ScalarProperty Name="primer_apellido" ColumnName="primer_apellido" />
+                <ScalarProperty Name="segundo_apellido" ColumnName="segundo_apellido" />
+                <ScalarProperty Name="telefono" ColumnName="telefono" />
+                <ScalarProperty Name="direccion" ColumnName="direccion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Raza">
+            <EntityTypeMapping TypeName="VeterinariaDBModel.Raza">
+              <MappingFragment StoreEntitySet="Raza">
+                <ScalarProperty Name="codigo_raza" ColumnName="codigo_raza" />
+                <ScalarProperty Name="nombre_raza" ColumnName="nombre_raza" />
+                <ScalarProperty Name="tamano" ColumnName="tamano" />
+                <ScalarProperty Name="codigo_especie" ColumnName="codigo_especie" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
