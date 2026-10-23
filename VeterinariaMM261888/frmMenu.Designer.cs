@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnRazas = new System.Windows.Forms.Button();
+            this.btnEspecies = new System.Windows.Forms.Button();
+            this.btnPropietarios = new System.Windows.Forms.Button();
+            this.btnMascotas = new System.Windows.Forms.Button();
             this.btnVerMascotas = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnMascotas = new System.Windows.Forms.Button();
-            this.btnPropietarios = new System.Windows.Forms.Button();
-            this.btnEspecies = new System.Windows.Forms.Button();
-            this.btnRazas = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,48 +55,17 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(686, 174);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // btnVerMascotas
+            // btnRazas
             // 
-            this.btnVerMascotas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVerMascotas.Location = new System.Drawing.Point(54, 168);
-            this.btnVerMascotas.Name = "btnVerMascotas";
-            this.btnVerMascotas.Size = new System.Drawing.Size(686, 46);
-            this.btnVerMascotas.TabIndex = 1;
-            this.btnVerMascotas.Text = "Ver Mascotas";
-            this.btnVerMascotas.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(67, 61);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(657, 55);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Gestión de Clínica Veterinaria";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btnMascotas
-            // 
-            this.btnMascotas.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnMascotas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMascotas.Location = new System.Drawing.Point(3, 3);
-            this.btnMascotas.Name = "btnMascotas";
-            this.btnMascotas.Size = new System.Drawing.Size(337, 81);
-            this.btnMascotas.TabIndex = 2;
-            this.btnMascotas.Text = "Gestionar Mascotas";
-            this.btnMascotas.UseVisualStyleBackColor = true;
-            // 
-            // btnPropietarios
-            // 
-            this.btnPropietarios.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnPropietarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPropietarios.Location = new System.Drawing.Point(346, 3);
-            this.btnPropietarios.Name = "btnPropietarios";
-            this.btnPropietarios.Size = new System.Drawing.Size(337, 81);
-            this.btnPropietarios.TabIndex = 3;
-            this.btnPropietarios.Text = "Gestionar Propietarios";
-            this.btnPropietarios.UseVisualStyleBackColor = true;
+            this.btnRazas.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnRazas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRazas.Location = new System.Drawing.Point(346, 90);
+            this.btnRazas.Name = "btnRazas";
+            this.btnRazas.Size = new System.Drawing.Size(337, 81);
+            this.btnRazas.TabIndex = 5;
+            this.btnRazas.Text = "Gestionar Razas";
+            this.btnRazas.UseVisualStyleBackColor = true;
+            this.btnRazas.Click += new System.EventHandler(this.btnRazas_Click);
             // 
             // btnEspecies
             // 
@@ -108,17 +77,54 @@
             this.btnEspecies.TabIndex = 4;
             this.btnEspecies.Text = "Gestionar Especies";
             this.btnEspecies.UseVisualStyleBackColor = true;
+            this.btnEspecies.Click += new System.EventHandler(this.btnEspecies_Click);
             // 
-            // btnRazas
+            // btnPropietarios
             // 
-            this.btnRazas.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnRazas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRazas.Location = new System.Drawing.Point(346, 90);
-            this.btnRazas.Name = "btnRazas";
-            this.btnRazas.Size = new System.Drawing.Size(337, 81);
-            this.btnRazas.TabIndex = 5;
-            this.btnRazas.Text = "Gestionar Razas";
-            this.btnRazas.UseVisualStyleBackColor = true;
+            this.btnPropietarios.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnPropietarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPropietarios.Location = new System.Drawing.Point(346, 3);
+            this.btnPropietarios.Name = "btnPropietarios";
+            this.btnPropietarios.Size = new System.Drawing.Size(337, 81);
+            this.btnPropietarios.TabIndex = 3;
+            this.btnPropietarios.Text = "Gestionar Propietarios";
+            this.btnPropietarios.UseVisualStyleBackColor = true;
+            this.btnPropietarios.Click += new System.EventHandler(this.btnPropietarios_Click);
+            // 
+            // btnMascotas
+            // 
+            this.btnMascotas.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnMascotas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMascotas.Location = new System.Drawing.Point(3, 3);
+            this.btnMascotas.Name = "btnMascotas";
+            this.btnMascotas.Size = new System.Drawing.Size(337, 81);
+            this.btnMascotas.TabIndex = 2;
+            this.btnMascotas.Text = "Gestionar Mascotas";
+            this.btnMascotas.UseVisualStyleBackColor = true;
+            this.btnMascotas.Click += new System.EventHandler(this.btnMascotas_Click);
+            // 
+            // btnVerMascotas
+            // 
+            this.btnVerMascotas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVerMascotas.Location = new System.Drawing.Point(54, 168);
+            this.btnVerMascotas.Name = "btnVerMascotas";
+            this.btnVerMascotas.Size = new System.Drawing.Size(686, 46);
+            this.btnVerMascotas.TabIndex = 1;
+            this.btnVerMascotas.Text = "Ver Mascotas Registradas";
+            this.btnVerMascotas.UseVisualStyleBackColor = true;
+            this.btnVerMascotas.Click += new System.EventHandler(this.btnVerMascotas_Click);
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(53, 73);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(687, 55);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Gestión de Clínica Veterinaria";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // frmMenu
             // 
@@ -129,7 +135,9 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.btnVerMascotas);
             this.Name = "frmMenu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmMenu_FormClosed);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

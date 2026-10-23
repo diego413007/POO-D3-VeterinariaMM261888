@@ -29,38 +29,38 @@
         private void InitializeComponent()
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.lblTitulo = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtNombre = new System.Windows.Forms.TextBox();
-            this.gbSexo = new System.Windows.Forms.GroupBox();
-            this.rbMas = new System.Windows.Forms.RadioButton();
-            this.rbFem = new System.Windows.Forms.RadioButton();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.dtpIngreso = new System.Windows.Forms.DateTimePicker();
-            this.label4 = new System.Windows.Forms.Label();
-            this.numPeso = new System.Windows.Forms.NumericUpDown();
-            this.cmbRaza = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.mtxtDui = new System.Windows.Forms.MaskedTextBox();
-            this.dgvMascotas = new System.Windows.Forms.DataGridView();
+            this.lblID = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
-            this.lblID = new System.Windows.Forms.Label();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.lblTitulo = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.gbSexo = new System.Windows.Forms.GroupBox();
+            this.rbFem = new System.Windows.Forms.RadioButton();
+            this.rbMas = new System.Windows.Forms.RadioButton();
+            this.label2 = new System.Windows.Forms.Label();
+            this.numPeso = new System.Windows.Forms.NumericUpDown();
+            this.label3 = new System.Windows.Forms.Label();
+            this.dtpIngreso = new System.Windows.Forms.DateTimePicker();
+            this.label4 = new System.Windows.Forms.Label();
+            this.cmbRaza = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.mtxtDui = new System.Windows.Forms.MaskedTextBox();
+            this.dgvMascotas = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
+            this.flowLayoutPanel2.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.gbSexo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numPeso)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMascotas)).BeginInit();
-            this.flowLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -83,6 +83,74 @@
             this.splitContainer1.SplitterDistance = 266;
             this.splitContainer1.TabIndex = 0;
             // 
+            // lblID
+            // 
+            this.lblID.AutoSize = true;
+            this.lblID.Location = new System.Drawing.Point(109, 380);
+            this.lblID.Name = "lblID";
+            this.lblID.Size = new System.Drawing.Size(10, 13);
+            this.lblID.TabIndex = 8;
+            this.lblID.Text = "-";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(22, 380);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(85, 13);
+            this.label6.TabIndex = 4;
+            this.label6.Text = "Id seleccionado:";
+            // 
+            // flowLayoutPanel2
+            // 
+            this.flowLayoutPanel2.Controls.Add(this.btnLimpiar);
+            this.flowLayoutPanel2.Controls.Add(this.btnNuevo);
+            this.flowLayoutPanel2.Controls.Add(this.btnModificar);
+            this.flowLayoutPanel2.Controls.Add(this.btnEliminar);
+            this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 401);
+            this.flowLayoutPanel2.MinimumSize = new System.Drawing.Size(266, 80);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(266, 80);
+            this.flowLayoutPanel2.TabIndex = 3;
+            // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.Location = new System.Drawing.Point(3, 3);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(260, 31);
+            this.btnLimpiar.TabIndex = 9;
+            this.btnLimpiar.Text = "Limpiar";
+            this.btnLimpiar.UseVisualStyleBackColor = true;
+            // 
+            // btnNuevo
+            // 
+            this.btnNuevo.Location = new System.Drawing.Point(3, 40);
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(83, 37);
+            this.btnNuevo.TabIndex = 10;
+            this.btnNuevo.Text = "Nuevo";
+            this.btnNuevo.UseVisualStyleBackColor = true;
+            // 
+            // btnModificar
+            // 
+            this.btnModificar.Location = new System.Drawing.Point(92, 40);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(83, 37);
+            this.btnModificar.TabIndex = 11;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.UseVisualStyleBackColor = true;
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Location = new System.Drawing.Point(181, 40);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(82, 37);
+            this.btnEliminar.TabIndex = 12;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.Controls.Add(this.lblTitulo);
@@ -100,7 +168,7 @@
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(20);
             this.flowLayoutPanel1.Size = new System.Drawing.Size(266, 370);
@@ -143,31 +211,31 @@
             this.gbSexo.Margin = new System.Windows.Forms.Padding(3, 3, 3, 10);
             this.gbSexo.Name = "gbSexo";
             this.gbSexo.Size = new System.Drawing.Size(200, 48);
-            this.gbSexo.TabIndex = 4;
+            this.gbSexo.TabIndex = 3;
             this.gbSexo.TabStop = false;
             this.gbSexo.Text = "Sexo";
-            // 
-            // rbMas
-            // 
-            this.rbMas.AutoSize = true;
-            this.rbMas.Location = new System.Drawing.Point(6, 19);
-            this.rbMas.Name = "rbMas";
-            this.rbMas.Size = new System.Drawing.Size(73, 17);
-            this.rbMas.TabIndex = 0;
-            this.rbMas.TabStop = true;
-            this.rbMas.Text = "Masculino";
-            this.rbMas.UseVisualStyleBackColor = true;
             // 
             // rbFem
             // 
             this.rbFem.AutoSize = true;
             this.rbFem.Location = new System.Drawing.Point(98, 20);
             this.rbFem.Name = "rbFem";
-            this.rbFem.Size = new System.Drawing.Size(71, 17);
-            this.rbFem.TabIndex = 1;
+            this.rbFem.Size = new System.Drawing.Size(62, 17);
+            this.rbFem.TabIndex = 4;
             this.rbFem.TabStop = true;
-            this.rbFem.Text = "Femenino";
+            this.rbFem.Text = "Hembra";
             this.rbFem.UseVisualStyleBackColor = true;
+            // 
+            // rbMas
+            // 
+            this.rbMas.AutoSize = true;
+            this.rbMas.Location = new System.Drawing.Point(6, 19);
+            this.rbMas.Name = "rbMas";
+            this.rbMas.Size = new System.Drawing.Size(58, 17);
+            this.rbMas.TabIndex = 3;
+            this.rbMas.TabStop = true;
+            this.rbMas.Text = "Macho";
+            this.rbMas.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
@@ -177,6 +245,14 @@
             this.label2.Size = new System.Drawing.Size(53, 13);
             this.label2.TabIndex = 5;
             this.label2.Text = "Peso (Kg)";
+            // 
+            // numPeso
+            // 
+            this.numPeso.Location = new System.Drawing.Point(23, 180);
+            this.numPeso.Margin = new System.Windows.Forms.Padding(3, 3, 3, 10);
+            this.numPeso.Name = "numPeso";
+            this.numPeso.Size = new System.Drawing.Size(120, 20);
+            this.numPeso.TabIndex = 5;
             // 
             // label3
             // 
@@ -193,7 +269,7 @@
             this.dtpIngreso.Margin = new System.Windows.Forms.Padding(3, 3, 3, 10);
             this.dtpIngreso.Name = "dtpIngreso";
             this.dtpIngreso.Size = new System.Drawing.Size(200, 20);
-            this.dtpIngreso.TabIndex = 8;
+            this.dtpIngreso.TabIndex = 6;
             // 
             // label4
             // 
@@ -204,14 +280,6 @@
             this.label4.TabIndex = 9;
             this.label4.Text = "Raza";
             // 
-            // numPeso
-            // 
-            this.numPeso.Location = new System.Drawing.Point(23, 180);
-            this.numPeso.Margin = new System.Windows.Forms.Padding(3, 3, 3, 10);
-            this.numPeso.Name = "numPeso";
-            this.numPeso.Size = new System.Drawing.Size(120, 20);
-            this.numPeso.TabIndex = 10;
-            // 
             // cmbRaza
             // 
             this.cmbRaza.FormattingEnabled = true;
@@ -219,7 +287,7 @@
             this.cmbRaza.Margin = new System.Windows.Forms.Padding(3, 3, 3, 10);
             this.cmbRaza.Name = "cmbRaza";
             this.cmbRaza.Size = new System.Drawing.Size(196, 21);
-            this.cmbRaza.TabIndex = 11;
+            this.cmbRaza.TabIndex = 7;
             // 
             // label5
             // 
@@ -236,84 +304,19 @@
             this.mtxtDui.Mask = "00000000-0";
             this.mtxtDui.Name = "mtxtDui";
             this.mtxtDui.Size = new System.Drawing.Size(96, 20);
-            this.mtxtDui.TabIndex = 13;
+            this.mtxtDui.TabIndex = 8;
             // 
             // dgvMascotas
             // 
             this.dgvMascotas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMascotas.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvMascotas.Location = new System.Drawing.Point(0, 0);
+            this.dgvMascotas.MultiSelect = false;
             this.dgvMascotas.Name = "dgvMascotas";
+            this.dgvMascotas.ReadOnly = true;
+            this.dgvMascotas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvMascotas.Size = new System.Drawing.Size(530, 481);
-            this.dgvMascotas.TabIndex = 0;
-            // 
-            // flowLayoutPanel2
-            // 
-            this.flowLayoutPanel2.Controls.Add(this.btnLimpiar);
-            this.flowLayoutPanel2.Controls.Add(this.btnNuevo);
-            this.flowLayoutPanel2.Controls.Add(this.btnModificar);
-            this.flowLayoutPanel2.Controls.Add(this.btnEliminar);
-            this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 401);
-            this.flowLayoutPanel2.MinimumSize = new System.Drawing.Size(266, 80);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(266, 80);
-            this.flowLayoutPanel2.TabIndex = 3;
-            // 
-            // btnLimpiar
-            // 
-            this.btnLimpiar.Location = new System.Drawing.Point(3, 3);
-            this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(260, 31);
-            this.btnLimpiar.TabIndex = 3;
-            this.btnLimpiar.Text = "Limpiar";
-            this.btnLimpiar.UseVisualStyleBackColor = true;
-            // 
-            // btnNuevo
-            // 
-            this.btnNuevo.Location = new System.Drawing.Point(3, 40);
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(83, 37);
-            this.btnNuevo.TabIndex = 0;
-            this.btnNuevo.Text = "Nuevo";
-            this.btnNuevo.UseVisualStyleBackColor = true;
-            // 
-            // btnModificar
-            // 
-            this.btnModificar.Location = new System.Drawing.Point(92, 40);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(83, 37);
-            this.btnModificar.TabIndex = 4;
-            this.btnModificar.Text = "Modificar";
-            this.btnModificar.UseVisualStyleBackColor = true;
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.Location = new System.Drawing.Point(181, 40);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(82, 37);
-            this.btnEliminar.TabIndex = 5;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = true;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(22, 380);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(85, 13);
-            this.label6.TabIndex = 4;
-            this.label6.Text = "Id seleccionado:";
-            // 
-            // lblID
-            // 
-            this.lblID.AutoSize = true;
-            this.lblID.Location = new System.Drawing.Point(109, 380);
-            this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(10, 13);
-            this.lblID.TabIndex = 8;
-            this.lblID.Text = "-";
+            this.dgvMascotas.TabIndex = 2;
             // 
             // frmMascota
             // 
@@ -321,20 +324,23 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 481);
             this.Controls.Add(this.splitContainer1);
+            this.KeyPreview = true;
             this.Name = "frmMascota";
             this.Text = "frmMascota";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmMascota_FormClosed);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.frmMascota_KeyUp);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
+            this.flowLayoutPanel2.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
             this.gbSexo.ResumeLayout(false);
             this.gbSexo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numPeso)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMascotas)).EndInit();
-            this.flowLayoutPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -357,7 +363,6 @@
         private System.Windows.Forms.ComboBox cmbRaza;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.MaskedTextBox mtxtDui;
-        private System.Windows.Forms.DataGridView dgvMascotas;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.Button btnNuevo;
@@ -365,5 +370,6 @@
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label lblID;
+        private System.Windows.Forms.DataGridView dgvMascotas;
     }
 }

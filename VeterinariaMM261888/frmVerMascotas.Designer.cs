@@ -30,12 +30,12 @@
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.label1 = new System.Windows.Forms.Label();
-            this.dgvVMascotas = new System.Windows.Forms.DataGridView();
+            this.dgvVerMascotas = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvVMascotas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVerMascotas)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -51,30 +51,34 @@
             // 
             // splitContainer1.Panel2
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.dgvVMascotas);
+            this.splitContainer1.Panel2.Controls.Add(this.dgvVerMascotas);
             this.splitContainer1.Size = new System.Drawing.Size(800, 450);
             this.splitContainer1.SplitterDistance = 100;
             this.splitContainer1.TabIndex = 0;
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(240, 35);
+            this.label1.Location = new System.Drawing.Point(300, 33);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(277, 25);
+            this.label1.Size = new System.Drawing.Size(226, 25);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Tabla General de Mascotas";
+            this.label1.Text = "Mascotas Registradas";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // dgvVMascotas
+            // dgvVerMascotas
             // 
-            this.dgvVMascotas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvVMascotas.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvVMascotas.Location = new System.Drawing.Point(0, 0);
-            this.dgvVMascotas.Name = "dgvVMascotas";
-            this.dgvVMascotas.Size = new System.Drawing.Size(800, 346);
-            this.dgvVMascotas.TabIndex = 0;
+            this.dgvVerMascotas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvVerMascotas.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvVerMascotas.Location = new System.Drawing.Point(0, 0);
+            this.dgvVerMascotas.MultiSelect = false;
+            this.dgvVerMascotas.Name = "dgvVerMascotas";
+            this.dgvVerMascotas.ReadOnly = true;
+            this.dgvVerMascotas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvVerMascotas.Size = new System.Drawing.Size(800, 346);
+            this.dgvVerMascotas.TabIndex = 3;
             // 
             // frmVerMascotas
             // 
@@ -82,14 +86,19 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.splitContainer1);
+            this.KeyPreview = true;
             this.Name = "frmVerMascotas";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmVerMascotas";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmVerMascotas_FormClosed);
+            this.Load += new System.EventHandler(this.frmVerMascotas_Load);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.frmVerMascotas_KeyUp);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvVMascotas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVerMascotas)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -98,6 +107,6 @@
 
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dgvVMascotas;
+        private System.Windows.Forms.DataGridView dgvVerMascotas;
     }
 }

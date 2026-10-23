@@ -16,5 +16,45 @@ namespace VeterinariaMM261888
         {
             InitializeComponent();
         }
+
+        private void btnVerMascotas_Click(object sender, EventArgs e)
+        {
+            frmVerMascotas frmVerMascotas = new frmVerMascotas();
+            frmVerMascotas.Show();
+            this.Hide();
+        }
+
+        private void btnMascotas_Click(object sender, EventArgs e)
+        {
+            frmMascota frmMascota = new frmMascota();
+            frmMascota.Show();
+            this.Hide();
+        }
+
+        private void btnPropietarios_Click(object sender, EventArgs e)
+        {
+            frmPropietario frmPropietario = new frmPropietario();
+            frmPropietario.Show();
+            this.Hide();
+        }
+
+        private void btnEspecies_Click(object sender, EventArgs e)
+        {
+            frmEspecie frmEspecie = new frmEspecie();
+            frmEspecie.Show();
+            this.Hide();
+        }
+
+        private void btnRazas_Click(object sender, EventArgs e)
+        {
+            frmRaza frmRaza = new frmRaza();
+            frmRaza.Show();
+            this.Hide();
+        }
+
+        private void frmMenu_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

@@ -16,7 +16,7 @@ namespace VeterinariaMM261888
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmMascota());
+            Application.Run(new frmMenu());
         }
     }
 }

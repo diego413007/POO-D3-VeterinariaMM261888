@@ -29,35 +29,35 @@
         private void InitializeComponent()
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.dgvPropietarios = new System.Windows.Forms.DataGridView();
-            this.lblTitulo = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtNombres = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtApel1 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtApel2 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtDireccion = new System.Windows.Forms.TextBox();
-            this.mtxtTel = new System.Windows.Forms.MaskedTextBox();
+            this.lblID = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
-            this.lblID = new System.Windows.Forms.Label();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.lblTitulo = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtNombres = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtApel1 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtApel2 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.mtxtTel = new System.Windows.Forms.MaskedTextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtDireccion = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.mtxtDui = new System.Windows.Forms.MaskedTextBox();
+            this.dgvPropietarios = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
+            this.flowLayoutPanel2.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPropietarios)).BeginInit();
-            this.flowLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -80,6 +80,74 @@
             this.splitContainer1.SplitterDistance = 266;
             this.splitContainer1.TabIndex = 0;
             // 
+            // lblID
+            // 
+            this.lblID.AutoSize = true;
+            this.lblID.Location = new System.Drawing.Point(111, 380);
+            this.lblID.Name = "lblID";
+            this.lblID.Size = new System.Drawing.Size(10, 13);
+            this.lblID.TabIndex = 8;
+            this.lblID.Text = "-";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(20, 380);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(85, 13);
+            this.label7.TabIndex = 5;
+            this.label7.Text = "Id seleccionado:";
+            // 
+            // flowLayoutPanel2
+            // 
+            this.flowLayoutPanel2.Controls.Add(this.btnLimpiar);
+            this.flowLayoutPanel2.Controls.Add(this.btnNuevo);
+            this.flowLayoutPanel2.Controls.Add(this.btnModificar);
+            this.flowLayoutPanel2.Controls.Add(this.btnEliminar);
+            this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 401);
+            this.flowLayoutPanel2.MinimumSize = new System.Drawing.Size(266, 80);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(266, 80);
+            this.flowLayoutPanel2.TabIndex = 2;
+            // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.Location = new System.Drawing.Point(3, 3);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(263, 31);
+            this.btnLimpiar.TabIndex = 7;
+            this.btnLimpiar.Text = "Limpiar";
+            this.btnLimpiar.UseVisualStyleBackColor = true;
+            // 
+            // btnNuevo
+            // 
+            this.btnNuevo.Location = new System.Drawing.Point(3, 40);
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(83, 37);
+            this.btnNuevo.TabIndex = 8;
+            this.btnNuevo.Text = "Nuevo";
+            this.btnNuevo.UseVisualStyleBackColor = true;
+            // 
+            // btnModificar
+            // 
+            this.btnModificar.Location = new System.Drawing.Point(92, 40);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(83, 37);
+            this.btnModificar.TabIndex = 9;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.UseVisualStyleBackColor = true;
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Location = new System.Drawing.Point(181, 40);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(82, 37);
+            this.btnEliminar.TabIndex = 10;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.Controls.Add(this.lblTitulo);
@@ -94,7 +162,7 @@
             this.flowLayoutPanel1.Controls.Add(this.label4);
             this.flowLayoutPanel1.Controls.Add(this.txtDireccion);
             this.flowLayoutPanel1.Controls.Add(this.label5);
-            this.flowLayoutPanel1.Controls.Add(this.maskedTextBox1);
+            this.flowLayoutPanel1.Controls.Add(this.mtxtDui);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
@@ -102,15 +170,6 @@
             this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(20);
             this.flowLayoutPanel1.Size = new System.Drawing.Size(266, 370);
             this.flowLayoutPanel1.TabIndex = 0;
-            // 
-            // dgvPropietarios
-            // 
-            this.dgvPropietarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPropietarios.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvPropietarios.Location = new System.Drawing.Point(0, 0);
-            this.dgvPropietarios.Name = "dgvPropietarios";
-            this.dgvPropietarios.Size = new System.Drawing.Size(530, 481);
-            this.dgvPropietarios.TabIndex = 0;
             // 
             // lblTitulo
             // 
@@ -139,24 +198,7 @@
             this.txtNombres.Margin = new System.Windows.Forms.Padding(3, 3, 3, 10);
             this.txtNombres.Name = "txtNombres";
             this.txtNombres.Size = new System.Drawing.Size(200, 20);
-            this.txtNombres.TabIndex = 16;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(23, 287);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(26, 13);
-            this.label5.TabIndex = 24;
-            this.label5.Text = "DUI";
-            // 
-            // maskedTextBox1
-            // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(23, 303);
-            this.maskedTextBox1.Mask = "00000000-0";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(96, 20);
-            this.maskedTextBox1.TabIndex = 25;
+            this.txtNombres.TabIndex = 1;
             // 
             // label6
             // 
@@ -173,7 +215,7 @@
             this.txtApel1.Margin = new System.Windows.Forms.Padding(3, 3, 3, 10);
             this.txtApel1.Name = "txtApel1";
             this.txtApel1.Size = new System.Drawing.Size(120, 20);
-            this.txtApel1.TabIndex = 27;
+            this.txtApel1.TabIndex = 2;
             // 
             // label2
             // 
@@ -190,7 +232,7 @@
             this.txtApel2.Margin = new System.Windows.Forms.Padding(3, 3, 3, 10);
             this.txtApel2.Name = "txtApel2";
             this.txtApel2.Size = new System.Drawing.Size(120, 20);
-            this.txtApel2.TabIndex = 29;
+            this.txtApel2.TabIndex = 3;
             // 
             // label3
             // 
@@ -200,6 +242,16 @@
             this.label3.Size = new System.Drawing.Size(49, 13);
             this.label3.TabIndex = 30;
             this.label3.Text = "Teléfono";
+            // 
+            // mtxtTel
+            // 
+            this.mtxtTel.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.mtxtTel.Location = new System.Drawing.Point(23, 211);
+            this.mtxtTel.Margin = new System.Windows.Forms.Padding(3, 3, 3, 10);
+            this.mtxtTel.Mask = "0000-0000";
+            this.mtxtTel.Name = "mtxtTel";
+            this.mtxtTel.Size = new System.Drawing.Size(96, 20);
+            this.mtxtTel.TabIndex = 4;
             // 
             // label4
             // 
@@ -216,85 +268,36 @@
             this.txtDireccion.Margin = new System.Windows.Forms.Padding(3, 3, 3, 10);
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(120, 20);
-            this.txtDireccion.TabIndex = 33;
+            this.txtDireccion.TabIndex = 5;
             // 
-            // mtxtTel
+            // label5
             // 
-            this.mtxtTel.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.mtxtTel.Location = new System.Drawing.Point(23, 211);
-            this.mtxtTel.Margin = new System.Windows.Forms.Padding(3, 3, 3, 10);
-            this.mtxtTel.Mask = "0000-0000";
-            this.mtxtTel.Name = "mtxtTel";
-            this.mtxtTel.Size = new System.Drawing.Size(96, 20);
-            this.mtxtTel.TabIndex = 34;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(23, 287);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(26, 13);
+            this.label5.TabIndex = 24;
+            this.label5.Text = "DUI";
             // 
-            // flowLayoutPanel2
+            // mtxtDui
             // 
-            this.flowLayoutPanel2.Controls.Add(this.btnLimpiar);
-            this.flowLayoutPanel2.Controls.Add(this.btnNuevo);
-            this.flowLayoutPanel2.Controls.Add(this.btnModificar);
-            this.flowLayoutPanel2.Controls.Add(this.btnEliminar);
-            this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 401);
-            this.flowLayoutPanel2.MinimumSize = new System.Drawing.Size(266, 80);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(266, 80);
-            this.flowLayoutPanel2.TabIndex = 2;
+            this.mtxtDui.Location = new System.Drawing.Point(23, 303);
+            this.mtxtDui.Mask = "00000000-0";
+            this.mtxtDui.Name = "mtxtDui";
+            this.mtxtDui.Size = new System.Drawing.Size(96, 20);
+            this.mtxtDui.TabIndex = 6;
             // 
-            // btnLimpiar
+            // dgvPropietarios
             // 
-            this.btnLimpiar.Location = new System.Drawing.Point(3, 3);
-            this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(263, 31);
-            this.btnLimpiar.TabIndex = 3;
-            this.btnLimpiar.Text = "Limpiar";
-            this.btnLimpiar.UseVisualStyleBackColor = true;
-            // 
-            // btnNuevo
-            // 
-            this.btnNuevo.Location = new System.Drawing.Point(3, 40);
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(83, 37);
-            this.btnNuevo.TabIndex = 0;
-            this.btnNuevo.Text = "Nuevo";
-            this.btnNuevo.UseVisualStyleBackColor = true;
-            // 
-            // btnModificar
-            // 
-            this.btnModificar.Location = new System.Drawing.Point(92, 40);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(83, 37);
-            this.btnModificar.TabIndex = 4;
-            this.btnModificar.Text = "Modificar";
-            this.btnModificar.UseVisualStyleBackColor = true;
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.Location = new System.Drawing.Point(181, 40);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(82, 37);
-            this.btnEliminar.TabIndex = 5;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = true;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(20, 380);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(85, 13);
-            this.label7.TabIndex = 5;
-            this.label7.Text = "Id seleccionado:";
-            // 
-            // lblID
-            // 
-            this.lblID.AutoSize = true;
-            this.lblID.Location = new System.Drawing.Point(111, 380);
-            this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(10, 13);
-            this.lblID.TabIndex = 8;
-            this.lblID.Text = "-";
+            this.dgvPropietarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPropietarios.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvPropietarios.Location = new System.Drawing.Point(0, 0);
+            this.dgvPropietarios.MultiSelect = false;
+            this.dgvPropietarios.Name = "dgvPropietarios";
+            this.dgvPropietarios.ReadOnly = true;
+            this.dgvPropietarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvPropietarios.Size = new System.Drawing.Size(530, 481);
+            this.dgvPropietarios.TabIndex = 3;
             // 
             // frmPropietario
             // 
@@ -302,17 +305,21 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 481);
             this.Controls.Add(this.splitContainer1);
+            this.KeyPreview = true;
             this.Name = "frmPropietario";
             this.Text = "frmPropietario";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmPropietario_FormClosed);
+            this.Load += new System.EventHandler(this.frmPropietario_Load);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.frmPropietario_KeyUp);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
+            this.flowLayoutPanel2.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPropietarios)).EndInit();
-            this.flowLayoutPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -321,13 +328,12 @@
 
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.DataGridView dgvPropietarios;
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtNombres;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox mtxtDui;
         private System.Windows.Forms.TextBox txtApel1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtApel2;
@@ -342,5 +348,6 @@
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label lblID;
+        private System.Windows.Forms.DataGridView dgvPropietarios;
     }
 }

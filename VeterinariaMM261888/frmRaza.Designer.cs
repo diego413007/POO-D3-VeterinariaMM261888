@@ -29,32 +29,32 @@
         private void InitializeComponent()
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.lblTitulo = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtRaza = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.dgvRazas = new System.Windows.Forms.DataGridView();
-            this.cmbEspecie = new System.Windows.Forms.ComboBox();
-            this.gbTamano = new System.Windows.Forms.GroupBox();
-            this.rbMed = new System.Windows.Forms.RadioButton();
-            this.rbPeque = new System.Windows.Forms.RadioButton();
-            this.rbGran = new System.Windows.Forms.RadioButton();
+            this.lblID = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
-            this.lblID = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.lblTitulo = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtRaza = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cmbEspecie = new System.Windows.Forms.ComboBox();
+            this.gbTamano = new System.Windows.Forms.GroupBox();
+            this.rbGran = new System.Windows.Forms.RadioButton();
+            this.rbMed = new System.Windows.Forms.RadioButton();
+            this.rbPeque = new System.Windows.Forms.RadioButton();
+            this.dgvRazas = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            this.flowLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvRazas)).BeginInit();
-            this.gbTamano.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
+            this.gbTamano.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRazas)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -76,6 +76,74 @@
             this.splitContainer1.Size = new System.Drawing.Size(800, 481);
             this.splitContainer1.SplitterDistance = 266;
             this.splitContainer1.TabIndex = 0;
+            // 
+            // lblID
+            // 
+            this.lblID.AutoSize = true;
+            this.lblID.Location = new System.Drawing.Point(111, 380);
+            this.lblID.Name = "lblID";
+            this.lblID.Size = new System.Drawing.Size(10, 13);
+            this.lblID.TabIndex = 7;
+            this.lblID.Text = "-";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(21, 380);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(85, 13);
+            this.label6.TabIndex = 6;
+            this.label6.Text = "Id seleccionado:";
+            // 
+            // flowLayoutPanel2
+            // 
+            this.flowLayoutPanel2.Controls.Add(this.btnLimpiar);
+            this.flowLayoutPanel2.Controls.Add(this.btnNuevo);
+            this.flowLayoutPanel2.Controls.Add(this.btnModificar);
+            this.flowLayoutPanel2.Controls.Add(this.btnEliminar);
+            this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 401);
+            this.flowLayoutPanel2.MinimumSize = new System.Drawing.Size(266, 80);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(266, 80);
+            this.flowLayoutPanel2.TabIndex = 3;
+            // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.Location = new System.Drawing.Point(3, 3);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(263, 31);
+            this.btnLimpiar.TabIndex = 3;
+            this.btnLimpiar.Text = "Limpiar";
+            this.btnLimpiar.UseVisualStyleBackColor = true;
+            // 
+            // btnNuevo
+            // 
+            this.btnNuevo.Location = new System.Drawing.Point(3, 40);
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(83, 37);
+            this.btnNuevo.TabIndex = 0;
+            this.btnNuevo.Text = "Nuevo";
+            this.btnNuevo.UseVisualStyleBackColor = true;
+            // 
+            // btnModificar
+            // 
+            this.btnModificar.Location = new System.Drawing.Point(92, 40);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(83, 37);
+            this.btnModificar.TabIndex = 4;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.UseVisualStyleBackColor = true;
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Location = new System.Drawing.Point(181, 40);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(82, 37);
+            this.btnEliminar.TabIndex = 5;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
             // 
             // flowLayoutPanel1
             // 
@@ -131,15 +199,6 @@
             this.label2.TabIndex = 28;
             this.label2.Text = "Especie";
             // 
-            // dgvRazas
-            // 
-            this.dgvRazas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvRazas.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvRazas.Location = new System.Drawing.Point(0, 0);
-            this.dgvRazas.Name = "dgvRazas";
-            this.dgvRazas.Size = new System.Drawing.Size(530, 481);
-            this.dgvRazas.TabIndex = 0;
-            // 
             // cmbEspecie
             // 
             this.cmbEspecie.FormattingEnabled = true;
@@ -160,6 +219,17 @@
             this.gbTamano.TabIndex = 30;
             this.gbTamano.TabStop = false;
             this.gbTamano.Text = "Tamaño";
+            // 
+            // rbGran
+            // 
+            this.rbGran.AutoSize = true;
+            this.rbGran.Location = new System.Drawing.Point(6, 65);
+            this.rbGran.Name = "rbGran";
+            this.rbGran.Size = new System.Drawing.Size(60, 17);
+            this.rbGran.TabIndex = 2;
+            this.rbGran.TabStop = true;
+            this.rbGran.Text = "Grande";
+            this.rbGran.UseVisualStyleBackColor = true;
             // 
             // rbMed
             // 
@@ -183,84 +253,17 @@
             this.rbPeque.Text = "Pequeño";
             this.rbPeque.UseVisualStyleBackColor = true;
             // 
-            // rbGran
+            // dgvRazas
             // 
-            this.rbGran.AutoSize = true;
-            this.rbGran.Location = new System.Drawing.Point(6, 65);
-            this.rbGran.Name = "rbGran";
-            this.rbGran.Size = new System.Drawing.Size(60, 17);
-            this.rbGran.TabIndex = 2;
-            this.rbGran.TabStop = true;
-            this.rbGran.Text = "Grande";
-            this.rbGran.UseVisualStyleBackColor = true;
-            // 
-            // flowLayoutPanel2
-            // 
-            this.flowLayoutPanel2.Controls.Add(this.btnLimpiar);
-            this.flowLayoutPanel2.Controls.Add(this.btnNuevo);
-            this.flowLayoutPanel2.Controls.Add(this.btnModificar);
-            this.flowLayoutPanel2.Controls.Add(this.btnEliminar);
-            this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 401);
-            this.flowLayoutPanel2.MinimumSize = new System.Drawing.Size(266, 80);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(266, 80);
-            this.flowLayoutPanel2.TabIndex = 3;
-            // 
-            // btnLimpiar
-            // 
-            this.btnLimpiar.Location = new System.Drawing.Point(3, 3);
-            this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(263, 31);
-            this.btnLimpiar.TabIndex = 3;
-            this.btnLimpiar.Text = "Limpiar";
-            this.btnLimpiar.UseVisualStyleBackColor = true;
-            // 
-            // btnNuevo
-            // 
-            this.btnNuevo.Location = new System.Drawing.Point(3, 40);
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(83, 37);
-            this.btnNuevo.TabIndex = 0;
-            this.btnNuevo.Text = "Nuevo";
-            this.btnNuevo.UseVisualStyleBackColor = true;
-            // 
-            // btnModificar
-            // 
-            this.btnModificar.Location = new System.Drawing.Point(92, 40);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(83, 37);
-            this.btnModificar.TabIndex = 4;
-            this.btnModificar.Text = "Modificar";
-            this.btnModificar.UseVisualStyleBackColor = true;
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.Location = new System.Drawing.Point(181, 40);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(82, 37);
-            this.btnEliminar.TabIndex = 5;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = true;
-            // 
-            // lblID
-            // 
-            this.lblID.AutoSize = true;
-            this.lblID.Location = new System.Drawing.Point(111, 380);
-            this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(10, 13);
-            this.lblID.TabIndex = 7;
-            this.lblID.Text = "-";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(21, 380);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(85, 13);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "Id seleccionado:";
+            this.dgvRazas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvRazas.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvRazas.Location = new System.Drawing.Point(0, 0);
+            this.dgvRazas.MultiSelect = false;
+            this.dgvRazas.Name = "dgvRazas";
+            this.dgvRazas.ReadOnly = true;
+            this.dgvRazas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvRazas.Size = new System.Drawing.Size(530, 481);
+            this.dgvRazas.TabIndex = 3;
             // 
             // frmRaza
             // 
@@ -268,19 +271,22 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 481);
             this.Controls.Add(this.splitContainer1);
+            this.KeyPreview = true;
             this.Name = "frmRaza";
             this.Text = "frmRaza";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmRaza_FormClosed);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.frmRaza_KeyUp);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
+            this.flowLayoutPanel2.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvRazas)).EndInit();
             this.gbTamano.ResumeLayout(false);
             this.gbTamano.PerformLayout();
-            this.flowLayoutPanel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRazas)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -293,7 +299,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtRaza;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dgvRazas;
         private System.Windows.Forms.ComboBox cmbEspecie;
         private System.Windows.Forms.GroupBox gbTamano;
         private System.Windows.Forms.RadioButton rbGran;
@@ -306,5 +311,6 @@
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Label lblID;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.DataGridView dgvRazas;
     }
 }
