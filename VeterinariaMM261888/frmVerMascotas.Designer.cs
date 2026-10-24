@@ -61,16 +61,18 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(200, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(382, 39);
+            this.label1.Size = new System.Drawing.Size(400, 46);
             this.label1.TabIndex = 1;
             this.label1.Text = "Mascotas Registradas";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // dgvVerMascotas
             // 
+            this.dgvVerMascotas.BackgroundColor = System.Drawing.Color.LightSteelBlue;
             this.dgvVerMascotas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvVerMascotas.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvVerMascotas.Location = new System.Drawing.Point(0, 0);
@@ -85,6 +87,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.SlateGray;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.splitContainer1);
             this.KeyPreview = true;

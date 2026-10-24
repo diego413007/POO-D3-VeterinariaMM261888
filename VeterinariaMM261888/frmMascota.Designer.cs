@@ -81,7 +81,7 @@
             this.splitContainer1.Panel2.Controls.Add(this.dgvMascotas);
             this.splitContainer1.Panel2MinSize = 534;
             this.splitContainer1.Size = new System.Drawing.Size(800, 481);
-            this.splitContainer1.SplitterDistance = 262;
+            this.splitContainer1.SplitterDistance = 261;
             this.splitContainer1.TabIndex = 0;
             // 
             // lblID
@@ -110,6 +110,7 @@
             this.flowLayoutPanel2.Controls.Add(this.btnEliminar);
             this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 401);
+            this.flowLayoutPanel2.MaximumSize = new System.Drawing.Size(266, 80);
             this.flowLayoutPanel2.MinimumSize = new System.Drawing.Size(266, 80);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -118,39 +119,43 @@
             // 
             // btnLimpiar
             // 
+            this.btnLimpiar.BackColor = System.Drawing.SystemColors.Window;
             this.btnLimpiar.Location = new System.Drawing.Point(3, 3);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(260, 31);
             this.btnLimpiar.TabIndex = 9;
             this.btnLimpiar.Text = "Limpiar";
-            this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.UseVisualStyleBackColor = false;
             // 
             // btnNuevo
             // 
+            this.btnNuevo.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnNuevo.Location = new System.Drawing.Point(3, 40);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(83, 37);
             this.btnNuevo.TabIndex = 10;
             this.btnNuevo.Text = "Nuevo";
-            this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.UseVisualStyleBackColor = false;
             // 
             // btnModificar
             // 
+            this.btnModificar.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnModificar.Location = new System.Drawing.Point(92, 40);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(83, 37);
             this.btnModificar.TabIndex = 11;
             this.btnModificar.Text = "Modificar";
-            this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.UseVisualStyleBackColor = false;
             // 
             // btnEliminar
             // 
+            this.btnEliminar.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnEliminar.Location = new System.Drawing.Point(181, 40);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(82, 37);
             this.btnEliminar.TabIndex = 12;
             this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.UseVisualStyleBackColor = false;
             // 
             // flowLayoutPanel1
             // 
@@ -170,9 +175,10 @@
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
+            this.flowLayoutPanel1.MaximumSize = new System.Drawing.Size(265, 370);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(20);
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(262, 370);
+            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(20, 20, 20, 20);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(261, 370);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // lblTitulo
@@ -310,6 +316,7 @@
             // dgvMascotas
             // 
             this.dgvMascotas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvMascotas.BackgroundColor = System.Drawing.Color.SlateGray;
             this.dgvMascotas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMascotas.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvMascotas.Location = new System.Drawing.Point(0, 0);
@@ -317,13 +324,14 @@
             this.dgvMascotas.Name = "dgvMascotas";
             this.dgvMascotas.ReadOnly = true;
             this.dgvMascotas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvMascotas.Size = new System.Drawing.Size(534, 481);
+            this.dgvMascotas.Size = new System.Drawing.Size(535, 481);
             this.dgvMascotas.TabIndex = 2;
             // 
             // frmMascota
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.ClientSize = new System.Drawing.Size(800, 481);
             this.Controls.Add(this.splitContainer1);
             this.KeyPreview = true;
