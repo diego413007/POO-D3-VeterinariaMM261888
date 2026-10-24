@@ -14,7 +14,7 @@ namespace VeterinariaMM261888
         public frmRaza()
         {
             InitializeComponent();
-
+            this.StartPosition = FormStartPosition.CenterScreen;
             cmbEspecie.DropDownStyle = ComboBoxStyle.DropDownList;
            this.Load += frmRaza_Load;
             dgvRazas.CellClick += dgvRazas_CellClick;
@@ -240,7 +240,7 @@ namespace VeterinariaMM261888
         {
             if (e.KeyCode == Keys.Escape)
             {
-                this.Close();
+                this.BeginInvoke(new Action(() => this.Close()));
             }
         }
     }

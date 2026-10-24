@@ -73,8 +73,9 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.dgvRazas);
+            this.splitContainer1.Panel2MinSize = 530;
             this.splitContainer1.Size = new System.Drawing.Size(800, 481);
-            this.splitContainer1.SplitterDistance = 266;
+            this.splitContainer1.SplitterDistance = 265;
             this.splitContainer1.TabIndex = 0;
             // 
             // lblID
@@ -158,7 +159,7 @@
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(20);
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(266, 370);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(265, 370);
             this.flowLayoutPanel1.TabIndex = 1;
             // 
             // lblTitulo
@@ -255,6 +256,7 @@
             // 
             // dgvRazas
             // 
+            this.dgvRazas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvRazas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvRazas.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvRazas.Location = new System.Drawing.Point(0, 0);
@@ -262,7 +264,7 @@
             this.dgvRazas.Name = "dgvRazas";
             this.dgvRazas.ReadOnly = true;
             this.dgvRazas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvRazas.Size = new System.Drawing.Size(530, 481);
+            this.dgvRazas.Size = new System.Drawing.Size(531, 481);
             this.dgvRazas.TabIndex = 3;
             // 
             // frmRaza

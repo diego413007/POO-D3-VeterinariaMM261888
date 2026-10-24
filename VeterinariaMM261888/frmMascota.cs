@@ -18,7 +18,7 @@ namespace VeterinariaMM261888
         public frmMascota()
         {
             InitializeComponent();
-
+            this.StartPosition = FormStartPosition.CenterScreen;
             // Configuración de controles
             cmbRaza.DropDownStyle = ComboBoxStyle.DropDownList;
             numPeso.DecimalPlaces = 2;
@@ -263,7 +263,7 @@ namespace VeterinariaMM261888
         {
             if (e.KeyCode == Keys.Escape)
             {
-                this.Close();
+                this.BeginInvoke(new Action(() => this.Close()));
             }
         }
     }

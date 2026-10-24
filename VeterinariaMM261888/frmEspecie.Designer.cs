@@ -66,8 +66,9 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.dgvEspecies);
+            this.splitContainer1.Panel2MinSize = 530;
             this.splitContainer1.Size = new System.Drawing.Size(800, 481);
-            this.splitContainer1.SplitterDistance = 266;
+            this.splitContainer1.SplitterDistance = 265;
             this.splitContainer1.TabIndex = 0;
             // 
             // label6
@@ -106,7 +107,7 @@
             // 
             this.btnLimpiar.Location = new System.Drawing.Point(3, 3);
             this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(263, 31);
+            this.btnLimpiar.Size = new System.Drawing.Size(260, 31);
             this.btnLimpiar.TabIndex = 3;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.UseVisualStyleBackColor = true;
@@ -149,7 +150,7 @@
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(20);
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(266, 370);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(265, 370);
             this.flowLayoutPanel1.TabIndex = 1;
             // 
             // lblTitulo
@@ -191,7 +192,7 @@
             this.dgvEspecies.Name = "dgvEspecies";
             this.dgvEspecies.ReadOnly = true;
             this.dgvEspecies.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvEspecies.Size = new System.Drawing.Size(530, 481);
+            this.dgvEspecies.Size = new System.Drawing.Size(531, 481);
             this.dgvEspecies.TabIndex = 1;
             // 
             // frmEspecie

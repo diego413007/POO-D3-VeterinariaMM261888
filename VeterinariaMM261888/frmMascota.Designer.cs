@@ -79,8 +79,9 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.dgvMascotas);
+            this.splitContainer1.Panel2MinSize = 534;
             this.splitContainer1.Size = new System.Drawing.Size(800, 481);
-            this.splitContainer1.SplitterDistance = 266;
+            this.splitContainer1.SplitterDistance = 262;
             this.splitContainer1.TabIndex = 0;
             // 
             // lblID
@@ -171,7 +172,7 @@
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(20);
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(266, 370);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(262, 370);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // lblTitulo
@@ -308,6 +309,7 @@
             // 
             // dgvMascotas
             // 
+            this.dgvMascotas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvMascotas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMascotas.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvMascotas.Location = new System.Drawing.Point(0, 0);
@@ -315,7 +317,7 @@
             this.dgvMascotas.Name = "dgvMascotas";
             this.dgvMascotas.ReadOnly = true;
             this.dgvMascotas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvMascotas.Size = new System.Drawing.Size(530, 481);
+            this.dgvMascotas.Size = new System.Drawing.Size(534, 481);
             this.dgvMascotas.TabIndex = 2;
             // 
             // frmMascota
@@ -346,8 +348,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.Label label1;
@@ -371,5 +371,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label lblID;
         private System.Windows.Forms.DataGridView dgvMascotas;
+        private System.Windows.Forms.SplitContainer splitContainer1;
     }
 }

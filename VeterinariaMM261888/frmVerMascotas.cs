@@ -10,6 +10,7 @@ namespace VeterinariaMM261888
         public frmVerMascotas()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         // Consulta general: mascota + raza + especie + propietario en una sola grilla
@@ -54,9 +55,7 @@ namespace VeterinariaMM261888
         {
             if (e.KeyCode == Keys.Escape)
             {
-                this.Hide();
-                frmMenu frmMenu = new frmMenu();
-                frmMenu.Show();
+                this.BeginInvoke(new Action(() => this.Close()));
             }
         }
     }

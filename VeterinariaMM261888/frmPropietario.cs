@@ -14,6 +14,7 @@ namespace VeterinariaMM261888
         public frmPropietario()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
             dgvPropietarios.CellClick += dgvPropietarios_CellClick;
             btnLimpiar.Click += btnLimpiar_Click;
             btnNuevo.Click += btnNuevo_Click;
@@ -241,7 +242,7 @@ namespace VeterinariaMM261888
         {
             if (e.KeyCode == Keys.Escape)
             {
-                this.Close();
+                this.BeginInvoke(new Action(() => this.Close()));
             }
         }
     }

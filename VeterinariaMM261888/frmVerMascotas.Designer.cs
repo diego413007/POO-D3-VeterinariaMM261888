@@ -41,6 +41,7 @@
             // splitContainer1
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.IsSplitterFixed = true;
             this.splitContainer1.Location = new System.Drawing.Point(0, 0);
             this.splitContainer1.Name = "splitContainer1";
             this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
@@ -53,17 +54,17 @@
             // 
             this.splitContainer1.Panel2.Controls.Add(this.dgvVerMascotas);
             this.splitContainer1.Size = new System.Drawing.Size(800, 450);
-            this.splitContainer1.SplitterDistance = 100;
+            this.splitContainer1.SplitterDistance = 70;
             this.splitContainer1.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(300, 33);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(200, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(226, 25);
+            this.label1.Size = new System.Drawing.Size(382, 39);
             this.label1.TabIndex = 1;
             this.label1.Text = "Mascotas Registradas";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -77,7 +78,7 @@
             this.dgvVerMascotas.Name = "dgvVerMascotas";
             this.dgvVerMascotas.ReadOnly = true;
             this.dgvVerMascotas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvVerMascotas.Size = new System.Drawing.Size(800, 346);
+            this.dgvVerMascotas.Size = new System.Drawing.Size(800, 376);
             this.dgvVerMascotas.TabIndex = 3;
             // 
             // frmVerMascotas

@@ -14,7 +14,7 @@ namespace VeterinariaMM261888
         public frmEspecie()
         {
             InitializeComponent();
-
+            this.StartPosition = FormStartPosition.CenterScreen;
             this.Load += frmEspecie_Load;
             dgvEspecies.CellClick += dgvEspecies_CellClick;
             btnLimpiar.Click += btnLimpiar_Click;
@@ -177,7 +177,7 @@ namespace VeterinariaMM261888
         {
             if (e.KeyCode == Keys.Escape)
             {
-                this.Close();
+                this.BeginInvoke(new Action(() => this.Close()));
             }
         }
     }
